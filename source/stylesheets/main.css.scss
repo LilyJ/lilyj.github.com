@@ -1,0 +1,99 @@
+$yellow: #fffea7;
+$salmon: #FF847C;
+$black: #2A363B;
+$coffee: #7C5852;
+
+*{
+  // font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Raleway', sans-serif;
+}
+
+body h2{
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: $salmon;
+    text-align: center;
+}
+
+.hero {
+  min-width: 100%;
+  height: 405px;
+  background-image: url("/images/hero.png");
+  color: white;
+  position:relative;
+  border-top: 5px solid $yellow;
+  border-bottom: 5px solid $yellow;
+  text-align: center;
+  padding-top: 50px;
+  .logo{
+    height: 80px;
+  }
+  h1{ 
+    font-family: 'Abril Fatface', cursive;
+    font-size: 20px;
+    color: $coffee;
+  }
+  p{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 15px;
+  }
+  a.main-btn {
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: $salmon;
+    background-color:  $yellow;
+    &:hover{
+      color: $yellow;
+      background-color: $coffee;
+    }
+  }
+}
+
+.portfolio{
+  padding-top: 60px;
+  padding-bottom: 60px;  
+  min-width: 100%;
+  img{
+    border-radius: 50%;
+  }
+  .port-span{
+    text-align: center;
+    a, p{
+      color: $salmon;
+    }
+  }
+}
+
+.about{
+  min-width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px; 
+  border-top: 5px dashed $yellow;
+  #lily{
+    border-radius: 10px;
+  }
+  p{
+    font-size: 15px;
+    color: $coffee;
+  }
+}
+
+footer{
+  min-width: 100%;
+  padding-bottom: 1em;
+  background-color: $salmon;
+  border-top: 5px solid $yellow;
+  color: white;
+  .contact-form{
+    @media (min-width: 40em) { padding: 10px; }
+    @media (min-width: 64.063em) { padding: 30px;}
+    @media (min-width: 90.063em) { padding: 50px;} 
+  }
+  img{
+    padding: 10%;
+    @media only screen and (max-width: 40em) { padding:0}
+  }
+}
