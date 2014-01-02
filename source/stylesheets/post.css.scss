@@ -1,0 +1,19 @@
+$yellow: #fffea7;
+$salmon: #FF847C;
+$black: #2A363B;
+$coffee: #7C5852;
+
+div.post{
+  margin-top: 3em;
+  color: black;
+  border: 5px solid $yellow;
+  p{color: $coffee }
+  h3{ 
+    color: $salmon;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    padding-bottom: 2em;
+  }
+}

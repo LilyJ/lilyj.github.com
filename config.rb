@@ -76,6 +76,23 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+activate :blog do |blog|
+  blog.layout = "blog_layout"
+  blog.prefix = "posts"
+  # blog.sources = "posts/{year}-{month}-{day}-{title}.html.md"
+  blog.permalink = ":title.html"
+  
+  # blog.taglink = "tags/:tag.html"
+  # blog.tag_template  = "tag.html"
+  # blog.year_link = ":year.html"
+  # blog.month_link = ":year/:month.html"
+  # blog.day_link = ":year/:month/:day.html"
+  # blog.calendar_template = "calendar.html"
+  blog.paginate = true
+  blog.per_page = 10
+  blog.page_link = "p{num}"
+end
+
 activate :deploy do |deploy|
   deploy.method = :git
   # Optional Settings
