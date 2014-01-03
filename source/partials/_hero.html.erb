@@ -6,6 +6,10 @@
     <h1>HI. I'M LILY. </h1>
     <p>I love solving puzzles and making cool things.<br>
     Let's grab some coffee if you like what I do.</p>
-    <a class="main-btn" href="/#contact">Contact me</a>
+    <% if page_classes == "index" %>
+      <a class="scroll main-btn" data-speed="1500" data-easing="easeInOutCubic" data-url="false" href="#contact">Contact me</a>
+    <% else %>
+        <a class="main-btn" href="/#contact">Contact me</a>
+    <% end %>
   </div>
 </div>
