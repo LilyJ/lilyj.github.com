@@ -80,7 +80,7 @@ activate :blog do |blog|
   blog.layout = "blog_layout"
   blog.prefix = "posts"
   # blog.sources = "posts/{year}-{month}-{day}-{title}.html.md"
-  blog.permalink = ":title.html"
+  blog.permalink = ":title"
   
   # blog.taglink = "tags/:tag.html"
   # blog.tag_template  = "tag.html"
