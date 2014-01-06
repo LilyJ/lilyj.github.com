@@ -2,6 +2,7 @@ $yellow: #fffea7;
 $salmon: #FF847C;
 $black: #2A363B;
 $coffee: #7C5852;
+$green: #3B8686;
 
 *{
   // font-family: 'Merriweather', serif;
@@ -9,13 +10,24 @@ $coffee: #7C5852;
   // font-family: 'Raleway', sans-serif;
 }
 
-body h2{
+body {
+  h2{
     font-family: 'Merriweather', serif;
     font-weight: 300;
     font-size: 40px;
     color: $salmon;
     text-align: center;
+  }
+  h3{ 
+    font-family: 'Merriweather', serif;
+  }
+  h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+  }
 }
+
+
 
 .hero {
   min-width: 100%;
@@ -67,13 +79,31 @@ body h2{
   }
 }
 
+.feature-blog{
+  border: 5px solid $yellow;
+  padding: 1em 0 3em 0;
+  background-color: $salmon;
+  h2 {color: white;}
+  h3{ color: transparentize($black, 0.2); margin-top: 5%}
+  h4{ color: transparentize($black, 0.2); }
+  span{ 
+    font-family: 'Raleway', sans-serif; 
+    font-size: 0.8em;
+    font-weight: 500;
+    color: $green;
+  }
+}
+
+
 .about{
   min-width: 100%;
+  margin-top: 60px !important;
   padding-top: 60px;
-  padding-bottom: 60px; 
+  padding-bottom: 60px;
   border-top: 5px dashed $yellow;
   #lily{
-    border-radius: 10px;
+    border-radius: 1em;
+    @media (min-width: 64.063em) { width: 80%;}
   }
   p{
     font-size: 15px;

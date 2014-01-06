@@ -24,8 +24,8 @@
   </head>
   
   <body class="<%= page_classes %>">
-    <%= partial "partials/_hero" %>
     <%= partial "partials/_google-analytic" %>
+    <%= partial "partials/_hero" %>
     <%= yield %>
     <%= partial "partials/_footer" %>
     <%= javascript_include_tag "vendor/smooth-scroll" %>
