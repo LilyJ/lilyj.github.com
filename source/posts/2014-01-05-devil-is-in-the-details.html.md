@@ -1,7 +1,7 @@
 ---
 title: 'Devil is in the details'
 subtitle: 'Responsive web design kills'
-date: 2014-01-03
+date: 2014-01-05
 tags: responsive web design, rewire leadership, css, web design
 ---
 

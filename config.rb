@@ -76,11 +76,13 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+
+
 activate :blog do |blog|
   blog.layout = "blog_layout"
   blog.prefix = "posts"
   # blog.sources = "posts/{year}-{month}-{day}-{title}.html.md"
-  blog.permalink = ":title"
+  blog.permalink = ":year-:month-:day-:title"
   
   # blog.taglink = "tags/:tag.html"
   # blog.tag_template  = "tag.html"
@@ -92,6 +94,8 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.page_link = "p{num}"
 end
+
+activate :directory_indexes
 
 activate :deploy do |deploy|
   deploy.method = :git
