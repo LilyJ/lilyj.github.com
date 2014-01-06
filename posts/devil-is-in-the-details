@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Devil is in the details</title>
+    
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/post.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/foundation.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+  </head>
+  
+  <body class="posts posts_devil-is-in-the-details">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46786455-1', 'lilyj.me');
+  ga('send', 'pageview');
+
+</script>
+    <div class="hero row">
+  <div class="large-3 large-centered columns">
+    <a href="/">
+      <img class="logo" src="/images/logo.png" />
+    </a>
+    <h1>HI. I'M LILY. </h1>
+    <p>I love solving puzzles and making cool things.<br>
+    Let's grab some coffee if you like what I do.</p>
+    
+        <a class="main-btn" href="/#contact">Contact me</a>
+    
+  </div>
+</div>
+    <div class="post small-10 large-7 small-centered columns"><h2 id="the-devil-is-in-the-details">The devil is in the details</h2>
+
+<h3 id="responsive-web-design-kills">Responsive web design kills</h3>
+
+<p>Modern devices come in various shapes: some big, some small, some tall, some short. What it means for us, developers, is that we have to elegantly deal with various size viewports. Oh, and don't forget about browser compatibility. That's always…fun? </p>
+
+<p>Let's talk about Responsive Web Design (RWD). RWD is web design with the goal of creating sites that are easily usable across a range of device types (generally phone, tablet, and laptop/desktop). RWD is a relatively new concept, coined in 2010 and only became popular within the last year or so. <a href="http://mediaqueri.es/">These</a> are some great examples, especially if you are a visual learner like me.</p>
+
+<p>In my recent project working with <a href="http://rewireleadership.com">Rewire Leadership</a>, I remodeled their website to be responsive. There are numerous things that make RWD challenging. Here are some lessons I learned that developers and designers should bear in mind before implementing RWD.</p>
+
+<h4 id="wireframe">Wireframe</h4>
+<p>RWD makes wireframes more tricky. Most experts advise developing "'mobile first," which means developing for a small viewport and touchscreen first. This is probably a good idea but comes with some constraints that you should be aware of. </p>
+
+<p>There are features that can enhance usability for the big screen users but are completely unnecessary and could create annoyance for the users on small devices. For example, take a look at these breadcrumbs. Though they make navigating a little easier on large screens, they look terrible and are unnecessary on small screens.</p>
+
+<p><img alt="breadcrumbs" src="/images/posts/1-3-14/breadcrumbs.png" /></p>
+
+<p>Different devices serve different purposes: a laptop may be better for working, a tablet may be better for reading, and a phone may be better for portability. Developers therefore shouldn't look at web design as a one-size-fits-all because different devices are designed to serve different purposes. </p>
+
+<p>Take a look at the home page of Rewire Leadership for an example and see how remodelling the index page by customizing layout for different viewports can enhance user experience and facilitate business goals. Left is before; right is after.</p>
+
+<p><img alt="index_page_big" src="/images/posts/1-3-14/index_page_big_compare.png" /></p>
+
+<p>Take a closer look on how the layout changes in a smaller viewport.</p>
+
+<p><img alt="index_page_small" src="/images/posts/1-3-14/index_page_small_compare.png" /></p>
+
+<h4 id="dynamic-grid-is-your-friend">Dynamic Grid is your Friend</h4>
+
+<p>Dynamic grids make viewport-based layout changes far easier and more consistent than manual media queries. For instance, columns can stack on top of each other when the viewport shrinks, making the content easier to read on a mobile device.</p>
+
+<p>There are so many pre-made dynamic grids that you can make you hit the ground running. <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://foundation.zurb.com/">Foundation</a> frameworks both include good grid systems. There are also many framework-free dynamic grids available like <a href="http://neat.bourbon.io/">Bourbon Neat</a> and <a href="http://susy.oddbird.net/">Susy</a>.</p>
+
+<p>If you like to be more hands-on, be sure to define reasonable breakpoints and be consistent throughout the site otherwise it could result in a nightmare like this (which is how Rewire Leadership looked before I implemented a dynamic grid).</p>
+
+<p><img alt="grid" src="/images/posts/1-3-14/grid.png" /></p>
+
+<p><img alt="nightmare_grid" src="/images/posts/1-3-14/grid1.png" /></p>
+
+<p>Note: CSS Media queries don't work with older versions of IE (8 and earlier) :(. But don't worry, check out <a href="https://github.com/scottjehl/Respond">Respond.js</a>. Respond.js is a lightweight JavaScript polyfill for enabling media queries in old browsers. It will make your life a easier. I promise.</p>
+
+<h4 id="be-careful-with-tables">Be Careful with Tables</h4>
+<p>I know I know. People say tables are old-fashioned and boring, but sometimes they are the right choice. A table is great for readably displaying big chunks of tabular data.</p>
+
+<p>Tables can be a pain when it comes to RWD. Why? They just don't shrink! There are a number of tutorials out there for creating responsive tables. What I found that <a href="http://foundation.zurb.com/docs/components/tables.html">Zurb Foundation</a> includes and easy and reliable responsibe table. However, if possible, tables should be avoided for small viewports.</p>
+
+<p><img alt="table" src="/images/posts/1-3-14/table_compare.png" /></p>
+
+<h4 id="choose-the-right-background-picture">Choose the Right Background Picture</h4>
+
+<p>Choosing the right background picture in RWD can be bit challenging. A good candidate is one that still looks good even when the aspect ratio changes. </p>
+
+<p><img alt="background_bigview" src="/images/posts/1-3-14/background_bigview.png" /></p>
+
+<p><img alt="background_smallview" src="/images/posts/1-3-14/background_smallview.png" /></p>
+
+<p>Alternatively, you can set a condition for browsers to render different background images for different viewports. Go to <a href="http://stuffandnonsense.co.uk/">this page</a> and play around with it. It's fantastic.</p>
+
+<h4 id="dig-deeper">Dig deeper</h4>
+
+<p>Check out full Rewire Leadership site <a href="http://rewire-leadership-2013-12-01.herokuapp.com/">BEFORE</a> and <a href="http://rewireleadership.com">AFTER</a> the remodelling. </p>
+
+<p>Stay cool and keep coding,<br />
+Lily </p>
+</div>
+    <div class="post-footer">
+      <p>© 2014 Lily Jarusvasunt. Powered by Middleman and GitHub Pages.</p>
+      <a href="http://github.com/LilyJ" target="_blank"><img src="/images/github.png" /></a>
+      <a href="http://www.linkedin.com/in/lilyjarusvasunt" target="_blank"><img src="/images/linkedin.png" /></a> 
+    </div>
+  </body>
+</html>

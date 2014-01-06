@@ -1,0 +1,51 @@
+/* line 6, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+div.post {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  color: #7c5852;
+  border: 5px solid #fffea7; }
+  /* line 11, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+  div.post h3 {
+    color: #ff847c;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    padding-bottom: 2em; }
+  /* line 19, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+  div.post h4 {
+    color: #ff847c;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding-top: 0.8em; }
+  /* line 25, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+  div.post p {
+    line-height: 2.25em; }
+  /* line 26, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+  div.post blockquote {
+    font-size: 0.8em;
+    margin-left: 3em;
+    margin-right: 3em;
+    font-style: italic; }
+  /* line 32, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+  div.post img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  /* line 37, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+  div.post ul {
+    padding-left: 3em; }
+
+/* line 42, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+div.post-footer {
+  width: 100%;
+  background-color: #ff847c;
+  border-top: 5px solid #fffea7;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 0.9em;
+  color: white; }
+  /* line 51, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+  div.post-footer img {
+    height: 40px; }

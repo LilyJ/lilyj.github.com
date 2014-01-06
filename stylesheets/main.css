@@ -1,16 +1,23 @@
-/* line 6, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+/* line 7, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
 * {
   font-family: 'Open Sans', sans-serif; }
 
-/* line 12, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+/* line 14, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
 body h2 {
   font-family: 'Merriweather', serif;
   font-weight: 300;
   font-size: 40px;
   color: #ff847c;
   text-align: center; }
+/* line 21, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+body h3 {
+  font-family: 'Merriweather', serif; }
+/* line 24, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+body h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95em; }
 
-/* line 20, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+/* line 32, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
 .hero {
   min-width: 100%;
   height: 405px;
@@ -21,82 +28,118 @@ body h2 {
   border-bottom: 5px solid #fffea7;
   text-align: center;
   padding-top: 50px; }
-  /* line 30, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  /* line 42, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   .hero .logo {
     height: 80px; }
-  /* line 33, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  /* line 45, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   .hero h1 {
     font-family: 'Abril Fatface', cursive;
     font-size: 20px;
     color: #7c5852; }
-  /* line 38, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  /* line 50, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   .hero p {
     padding-top: 25px;
     padding-bottom: 25px;
     font-size: 15px; }
-  /* line 43, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  /* line 55, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   .hero a.main-btn {
     border-radius: 4px;
     padding: 10px 20px;
     color: #ff847c;
     background-color: #fffea7; }
-    /* line 48, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+    /* line 60, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
     .hero a.main-btn:hover {
       color: #fffea7;
       background-color: #7c5852; }
 
-/* line 55, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+/* line 67, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
 .portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
   min-width: 100%; }
-  /* line 59, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  /* line 71, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   .portfolio img {
     border-radius: 50%; }
-  /* line 62, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  /* line 74, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   .portfolio .port-span {
     text-align: center; }
-    /* line 64, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+    /* line 76, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
     .portfolio .port-span a, .portfolio .port-span p {
       color: #ff847c; }
 
-/* line 70, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+/* line 82, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+.feature-blog {
+  border: 5px solid #fffea7;
+  padding: 1em 0 3em 0;
+  background-color: #ff847c; }
+  /* line 86, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  .feature-blog h2 {
+    color: white; }
+  /* line 87, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  .feature-blog h3 {
+    color: rgba(42, 54, 59, 0.8);
+    margin-top: 5%; }
+  /* line 88, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  .feature-blog h4 {
+    color: rgba(42, 54, 59, 0.8); }
+  /* line 89, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  .feature-blog span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #3b8686; }
+
+/* line 98, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
 .about {
   min-width: 100%;
+  margin-top: 60px !important;
   padding-top: 60px;
   padding-bottom: 60px;
   border-top: 5px dashed #fffea7; }
-  /* line 75, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  /* line 104, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   .about #lily {
-    border-radius: 10px; }
-  /* line 78, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+    border-radius: 1em; }
+    @media (min-width: 64.063em) {
+      /* line 104, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+      .about #lily {
+        width: 80%; } }
+  /* line 108, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   .about p {
     font-size: 15px;
     color: #7c5852; }
 
-/* line 84, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+/* line 114, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
 footer {
   min-width: 100%;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   background-color: #ff847c;
   border-top: 5px solid #fffea7;
   color: white; }
+  /* line 120, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  footer p {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.9em; }
+    @media only screen and (min-width: 64.063em) {
+      /* line 120, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+      footer p {
+        left: 30%; } }
   @media (min-width: 40em) {
-    /* line 90, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+    /* line 126, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
     footer .contact-form {
       padding: 10px; } }
   @media (min-width: 64.063em) {
-    /* line 90, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+    /* line 126, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
     footer .contact-form {
       padding: 30px; } }
   @media (min-width: 90.063em) {
-    /* line 90, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+    /* line 126, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
     footer .contact-form {
       padding: 50px; } }
-  /* line 95, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+  /* line 131, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
   footer img {
     padding: 10%; }
     @media only screen and (max-width: 40em) {
-      /* line 95, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
+      /* line 131, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/main.css.scss */
       footer img {
         padding: 0; } }
