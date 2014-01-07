@@ -27,7 +27,25 @@ body {
   }
 }
 
-
+.menu-btn{
+  z-index: 1;
+  background-color: $yellow;
+  position: absolute;
+  border-radius: 4px;
+  top: 1em;
+  left: 0.5em;
+  @media (max-width: 40em){ 
+    font-size: 1.8em;
+    padding: 0.3em;
+  }
+  @media (min-width: 40em){
+    font-size: 2em;
+    padding: 0.3em;
+  }
+  .menu-list{
+    // grr what's going on here
+  }
+}
 
 .hero {
   min-width: 100%;
@@ -128,8 +146,13 @@ footer{
     @media (min-width: 64.063em) { padding: 30px;}
     @media (min-width: 90.063em) { padding: 50px;} 
   }
-  img{
-    padding: 10%;
-    @media only screen and (max-width: 40em) { padding:0}
+  .fa{
+    color: white;
+    font-size: 3em; padding-left: 10%;
+    @media (min-width: 40em) { font-size: 4em; padding-left: 20%; padding-bottom: 10%; }
+    @media (min-width: 64.063em) { font-size: 5em; padding-left: 20%; padding-bottom: 10%;} 
+  }
+  .fa-github-square{
+    margin-top: 1em;
   }
 }
