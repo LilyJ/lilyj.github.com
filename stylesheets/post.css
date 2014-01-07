@@ -47,5 +47,10 @@ div.post-footer {
   font-size: 0.9em;
   color: white; }
   /* line 51, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
+  div.post-footer .fa {
+    color: white;
+    font-size: 1.7em;
+    padding: 0.2em; }
+  /* line 56, /Users/Jarusvasunt/Code/lily_site/source/stylesheets/post.css.scss */
   div.post-footer img {
     height: 40px; }
