@@ -54,14 +54,14 @@ section, footer, header, aside{
 .left{
 	float: left;
 	overflow: scroll;
-	height: 500px;
+	height: 600px;
 	margin-right: 20px;
 }
 
 .right{
 	overflow: scroll;
 	width: 55%;
-	height: 500px;
+	height: 600px;
 	list-style-position: inside;
 }
 
