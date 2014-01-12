@@ -10,6 +10,10 @@ $green: #3B8686;
   // font-family: 'Raleway', sans-serif;
 }
 
+::selection {
+  background: $yellow; /* Safari */
+}
+
 body {
   h2{
     font-family: 'Merriweather', serif;
