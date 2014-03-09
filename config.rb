@@ -30,6 +30,7 @@ page "humans.txt", :layout => false
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
+page "/parallax", proxy: "/parallax/parallax.html", layout: false
 
 ###
 # Helpers

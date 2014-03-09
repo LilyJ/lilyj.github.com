@@ -1,0 +1,114 @@
+$cursive: 'Satisfy', cursive;
+$playful: 'Love Ya Like A Sister', cursive;;
+$classy: 'Codystar', cursive;
+$arcard: 'Monofett', cursive;
+
+$yellow: #ffdc2d;
+
+body{
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	height: 850px;
+}
+
+@mixin picture-background($picture, $height, $margin-top){
+  background: $picture;
+	background-position: cover;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: $height;
+	margin: 0 auto;
+	padding: 0;
+	margin-top: $margin-top;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(90deg); }
+    50%{ -webkit-transform: rotate(120deg); }
+    100%{ -webkit-transform: rotate(90deg); }
+}
+
+#first{
+  background:$yellow;
+	height: 700px;
+	margin: 0 auto;
+	padding: 0;
+	.bg{
+		background-image: url(images/lifebelt.svg);
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: 50%;
+		height: 450px;
+		width: 900px;
+		position: absolute;
+		top: -250px;
+		right: -250px;
+		-webkit-animation-name: spin;
+    -webkit-animation-duration: 7000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+	}
+	
+}
+#second{ @include picture-background(url(images/job.jpg), 900px, 0); }
+#third{ @include picture-background(url(images/third.jpg), 930px, -250px); }
+#forth{ @include picture-background(url(images/forth.jpg), 900px, -200px); }
+#fifth{ @include picture-background(url(images/fifth.jpg), 700px, -250px);}
+
+#first-story{
+	font-size: 100px;
+	margin: 0 auto;
+	padding-top: 250px;
+	padding-left: 50px;
+  min-width: 980px;
+  font-family: $playful;
+  color: white;
+  line-height: 1.5;
+}
+
+#second-story{
+	font-size: 70px;
+	font-family: 'Sue Ellen Francisco', cursive;
+	min-width: 300px;
+	padding-top: 50px;
+	float: right;
+	color: #7B564F;
+	#to-hide{
+		color: #77497C;
+	}
+}
+
+#third-story .float{
+	font-size: 50px;
+	background: transparentize(white, 0.2);
+	font-family: $cursive;
+	width: 300px;
+	padding: 2em;
+}
+
+.float-left{
+	float: left;
+	margin-left: 180px;
+	margin-top: 150px;
+}
+
+.float-right{
+	float: right;
+	margin-right: 240px;
+	margin-top: 230px;
+}
+
+#forth-story{
+	padding: 3em;
+	font-size: 70px;
+	font-family: $arcard;
+	color: $yellow;
+}
+
+#fifth-story{
+	font-size: 100px;
+	font-family: $classy;
+	color: red;
+	padding-top: 200px;
+}
