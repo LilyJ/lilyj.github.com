@@ -24,8 +24,6 @@ $(function(){
 		},
 
 		initialize: function(){
-			// _(this.model).sortBy(this.model.title);
-			// this.services.sort();
 			this.listenTo(this.model, 'change', this.render);
 		},
 

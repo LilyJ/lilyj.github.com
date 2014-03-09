@@ -19,7 +19,7 @@
 <link rel="shortcut icon" href="favicon.png" />
 <link rel="icon" type="image/ico" href="/favicon.ico" />
   </head>
-  <body class="index">
+  <body class="parallax parallax_parallax parallax_parallax_index">
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -36,13 +36,13 @@
 <aside class="left-off-canvas-menu">
   <ul class="off-canvas-list menu-list">
     
-      <li><a class="scroll main-btn" data-speed="1500" data-easing="easeInOutCubic" data-url="false" href="#portfolio">Portfolio</a></li>
+      <li><a href="/#portfolio">Portfolio</a></li>
     
     
-      <li><a class="scroll main-btn" data-speed="1500" href="#about">About</a></li>
+      <li><a href="/#about">About</a></li>
     
     
-      <li><a class="scroll main-btn" data-speed="1500" href="#contact">Contact</a></li>
+      <li><a href="/#contact">Contact</a></li>
     
     
     <!-- <li><a class="scroll main-btn" data-speed="1500" href="#">Blog</a></li> -->
@@ -58,53 +58,95 @@
     <p>I'm a full stack developer. I love solving puzzles and making cool things.<br>
     Let's grab some coffee if you like what I do.</p>
     
-      <a class="scroll main-btn" data-speed="1500" data-easing="easeInOutCubic" data-url="false" href="#contact">Contact me</a>
+        <a class="main-btn" href="/#contact">Contact me</a>
     
   </div>
 </div>
-        <div class="portfolio row" id="portfolio">
-  <h2>Portfolio</h2>
-  <div class="large-9 large-centered columns">
-     <ul class="port-span small-block-grid-2 large-block-grid-3">
-      <li><a href="/posts/2014-01-05-devil-is-in-the-details"><img src="/images/rewireleadership.png" /><p>Rewire Leadership</p></a></li>
-      <li><a href="/parallax"><img src="/images/parallax.png" /><p>Parallax, CSS animations, and more</p></a></li>
-      <li><a href="/frontend-bookmarks" target="_blank"><img src="/images/frontend-bookmarks.png" /><p>Frontend Development Bookmarks (BackboneJS)</p></a></li>
-      <li><a href="https://github.com/mule-deer-2013/OpenNGO" target="_blank"><img src="/images/helpag.png" /><p>Help Argentina</p></a></li>
-      <li><img src="/images/doodle.png" /><p>Coming soon</p></li>
-    </ul>
-  </div>
-</div>
+        
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Life is short</title>
+<link href="/parallax/parallax.css" media="screen" rel="stylesheet" type="text/css" /><link href='http://fonts.googleapis.com/css?family=Codystar|Satisfy|Monofett|Love+Ya+Like+A+Sister|Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.3.5/jquery.localScroll.min.js"></script>
 
-<div class="feature-blog row">
-  <div class="large-9 small-centered columns">
-    <h2>Lastest Post</h2>
-    <div class="small-12 large-6 columns">
-      <a href="/posts/2014-01-05-devil-is-in-the-details/">
-        <img src="/images/posts/1-3-14/table_compare.png" />
-      </a>
-    </div>
-    <div class="small-12 large-6 columns">
-      <span class="date">JANUARY  5, 2014</span>
-      <a href="/posts/2014-01-05-devil-is-in-the-details/">
-        <h3>Devil is in the details</h3>
-      </a>
-      <h4>Responsive web design kills</h4>
-    </div>
-  </div>
-</div>
+<script type="text/javascript">
+$(document).ready(function(){	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+		$('#first').parallax("50%", 0.2)
+		$('#third').parallax("50%", 0.2);
+		$('#fifth').parallax("50%", 0.3);
 
-<div class="about row" id="about">
-  <h2>About</h2>
-  <div class="large-9 large-centered columns">
-    <div class="large-3 columns">
-      <img id="lily" src="/images/lily.png" />
-    </div>
-    <div class="large-9 columns">
-      <p>Earlier this year, I decided to quit my job as a business consultant and moved across the world from Singapore to San Francisco with a dream of becoming a world changer.</p>
-      <p>My journey has just begun. I know that it is a risky decision but by far it's well worth it. I love every single moment of coding. I'm living my dream.</p>
-    </div>
-  </div>
-</div>
+		$(window).scroll(function(){
+			$("#to-hide").hide();
+			
+			if($(this).scrollTop() > 500){
+				$("#to-hide").show();
+			}
+
+			if($(this).scrollTop() > 2200){
+				$("#forth-story").fadeOut("slow");
+			}else{
+				$("#forth-story").fadeIn("slow");
+			}
+			
+			clearTimeout($.data(this, 'scrollTimer'));
+	    $.data(this, 'scrollTimer', setTimeout(function() {
+	        $("#blink").hide(300).show(300);
+	    }, 250));
+		})
+		
+	})
+</script>
+</head>
+
+<body>
+	<div id="first">
+		<div class="bg"></div>
+		<div class="story" id="first-story">
+	    This is your <span style="color: #E97F02">LIFE</span>.<br>
+	    Do what you love and do it <span style="color:#8A9B0F">OFTEN</span>. 
+	  </div> 
+	  
+	</div> 
+	
+	<div id="second">
+		<div id="second-story">
+			"If you don't like something.......
+			<span id="to-hide">CHANGE IT!!!</span>" 
+	  </div>   
+	</div> 
+	
+	<div id="third">
+		<div id="third-story">
+	    	<div class="float float-left">
+	        If you don't like your job, quit.
+	      </div>
+	      <div class="float float-right">
+	      	If you don't have enough time, stop watching TV.
+	      </div>
+	    </div> 
+	</div> 
+
+	<div id="forth">
+		<div id="forth-story">
+		  If you are looking for the love of your life, stop; they will be waiting for you when you start doing things you love.
+	   </div> 
+	</div>
+
+	<div id="fifth">
+		<div id="fifth-story">
+		  Stop over-analysing, life is <span id="blink"><span style="color: #8A9B0F">s</span><span style="color: #490A3D">i</span><span style="color: #E97F02">m</span><span style="color:#BD1550">p</span>l<span style="color:#F8CA00">e</span></span>.
+	  </div> 
+	</div> 
+</body>
+</html>
 
         <a class="exit-off-canvas"></a>
         <footer class="row" id="contact">
