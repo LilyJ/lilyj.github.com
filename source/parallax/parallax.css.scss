@@ -5,11 +5,12 @@ $arcard: 'Monofett', cursive;
 
 $yellow: #ffdc2d;
 
+$break-pt: 1437px;
+
 body{
 	margin: 0;
 	padding: 0;
-	min-width: 1437px;
-	height: 850px;
+	min-width: $break-pt;
 }
 
 @mixin picture-background($picture, $height, $margin-top){
@@ -23,7 +24,7 @@ body{
 	margin-top: $margin-top;
 }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes swing {
     0% { -webkit-transform: rotate(90deg); }
     50%{ -webkit-transform: rotate(120deg); }
     100%{ -webkit-transform: rotate(90deg); }
@@ -39,15 +40,20 @@ body{
 		background-repeat: no-repeat;
 		background-position: right;
 		background-size: 50%;
-		height: 450px;
-		width: 900px;
 		position: absolute;
-		top: -250px;
-		right: -250px;
-		-webkit-animation-name: spin;
+		-webkit-animation-name: swing;
     -webkit-animation-duration: 7000ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
+    @media screen and(max-width: $break-pt){
+    	top: -250px;
+			right: -250px;
+    }
+      height: 450px;
+			width: 900px;
+			top: -250px;
+			right: -250px;
+    
 	}
 	
 }
