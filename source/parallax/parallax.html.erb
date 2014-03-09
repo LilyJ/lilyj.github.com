@@ -33,11 +33,10 @@ $(document).ready(function(){
 				$("#forth-story").fadeIn("slow");
 			}
 			
-			if($(this).scrollTop() > 2000){
-				$("#blink").fadeOut(500).fadeIn(500).fadeOut(200);
-			}else{
-				$("#blink").show();
-			}
+			clearTimeout($.data(this, 'scrollTimer'));
+	    $.data(this, 'scrollTimer', setTimeout(function() {
+	        $("#blink").hide(300).show(300);
+	    }, 250));
 		})
 		
 	})
