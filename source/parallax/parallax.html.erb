@@ -1,86 +1,87 @@
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Life is short</title>
-<%= stylesheet_link_tag "parallax" %>
-<link href='http://fonts.googleapis.com/css?family=Codystar|Satisfy|Monofett|Love+Ya+Like+A+Sister|Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.3.5/jquery.localScroll.min.js"></script>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+		<title>Life is short</title>
+		<%= stylesheet_link_tag "parallax" %>
+		<link href='http://fonts.googleapis.com/css?family=Codystar|Satisfy|Monofett|Love+Ya+Like+A+Sister|Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.3.5/jquery.localScroll.min.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){	
-	//.parallax(xPosition, speedFactor, outerHeight) options:
-	//xPosition - Horizontal position of the element
-	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-		$('#first').parallax("50%", 0.2)
-		$('#third').parallax("50%", 0.2);
-		$('#fifth').parallax("50%", 0.3);
+		<script type="text/javascript">
+		$(document).ready(function(){	
+			//.parallax(xPosition, speedFactor, outerHeight) options:
+			//xPosition - Horizontal position of the element
+			//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+			//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+				$('#first').parallax("50%", 0.2)
+				$('#third').parallax("50%", 0.2);
+				$('#fifth').parallax("50%", 0.3);
 
-		$(window).scroll(function(){
-			$("#to-hide").hide();
-			
-			if($(this).scrollTop() > 500){
-				$("#to-hide").show();
-			}
+				$(window).scroll(function(){
+					$("#to-hide").hide();
+					
+					if($(this).scrollTop() > 500){
+						$("#to-hide").show();
+					}
 
-			if($(this).scrollTop() > 2200){
-				$("#forth-story").fadeOut("slow");
-			}else{
-				$("#forth-story").fadeIn("slow");
-			}
-			
-			clearTimeout($.data(this, 'scrollTimer'));
-	    $.data(this, 'scrollTimer', setTimeout(function() {
-	        $("#blink").hide(300).show(300);
-	    }, 250));
-		})
+					if($(this).scrollTop() > 2200){
+						$("#forth-story").fadeOut("slow");
+					}else{
+						$("#forth-story").fadeIn("slow");
+					}
+					
+					clearTimeout($.data(this, 'scrollTimer'));
+			    $.data(this, 'scrollTimer', setTimeout(function() {
+			        $("#blink").hide(300).show(300);
+			    }, 250));
+				})
+				
+			})
+		</script>
+	</head>
+
+	<body>
+		<div id="first">
+			<div class="bg"></div>
+			<div class="story" id="first-story">
+		    This is your <span style="color: #E97F02">LIFE</span>.<br>
+		    Do what you love and do it <span style="color:#8A9B0F">OFTEN</span>. 
+		  </div> 
+		  
+		</div> 
 		
-	})
-</script>
-</head>
+		<div id="second">
+			<div id="second-story">
+				"If you don't like something.......
+				<span id="to-hide">CHANGE IT!!!</span>" 
+		  </div>   
+		</div> 
+		
+		<div id="third">
+			<div id="third-story">
+		    	<div class="float float-left">
+		        If you don't like your job, quit.
+		      </div>
+		      <div class="float float-right">
+		      	If you don't have enough time, stop watching TV.
+		      </div>
+		    </div> 
+		</div> 
 
-<body>
-	<div id="first">
-		<div class="bg"></div>
-		<div class="story" id="first-story">
-	    This is your <span style="color: #E97F02">LIFE</span>.<br>
-	    Do what you love and do it <span style="color:#8A9B0F">OFTEN</span>. 
-	  </div> 
-	  
-	</div> 
-	
-	<div id="second">
-		<div id="second-story">
-			"If you don't like something.......
-			<span id="to-hide">CHANGE IT!!!</span>" 
-	  </div>   
-	</div> 
-	
-	<div id="third">
-		<div id="third-story">
-	    	<div class="float float-left">
-	        If you don't like your job, quit.
-	      </div>
-	      <div class="float float-right">
-	      	If you don't have enough time, stop watching TV.
-	      </div>
-	    </div> 
-	</div> 
+		<div id="forth">
+			<div id="forth-story">
+			  If you are looking for the love of your life, stop; they will be waiting for you when you start doing things you love.
+		   </div> 
+		</div>
 
-	<div id="forth">
-		<div id="forth-story">
-		  If you are looking for the love of your life, stop; they will be waiting for you when you start doing things you love.
-	   </div> 
-	</div>
-
-	<div id="fifth">
-		<div id="fifth-story">
-		  Stop over-analysing, life is <span id="blink"><span style="color: #8A9B0F">s</span><span style="color: #490A3D">i</span><span style="color: #E97F02">m</span><span style="color:#BD1550">p</span>l<span style="color:#F8CA00">e</span></span>.
-	  </div> 
-	</div> 
-</body>
+		<div id="fifth">
+			<div id="fifth-story">
+			  Stop over-analysing, life is <span id="blink"><span style="color: #8A9B0F">s</span><span style="color: #490A3D">i</span><span style="color: #E97F02">m</span><span style="color:#BD1550">p</span>l<span style="color:#F8CA00">e</span></span>.
+		  </div> 
+		</div> 
+	</body>
 </html>
