@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.2/css/foundation.min.css">
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/post.css" media="screen" rel="stylesheet" type="text/css" /><link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500|Merriweather|Open+Sans:400,300|Abril+Fatface' rel='stylesheet' type='text/css'>
+<!-- Always force latest IE rendering engine or request Chrome Frame -->
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<!-- Use title if it's in the page YAML frontmatter -->
+<title>Lily Jarusvasunt</title>
+<script src="/javascripts/vendor/jquery.js" type="text/javascript"></script><link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+<link rel="shortcut icon" href="favicon.png" />
+<link rel="icon" type="image/ico" href="/favicon.ico" />
+  </head>
+  <body class="fb-visualization fb-visualization_index">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46786455-1', 'lilyj.me');
+  ga('send', 'pageview');
+
+</script>
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap">
+        <a class="left-off-canvas-toggle menu-btn"><i class="fa fa-bars"></i></a>
+<aside class="left-off-canvas-menu">
+  <ul class="off-canvas-list menu-list">
+    
+      <li><a href="/#portfolio">Portfolio</a></li>
+    
+    
+      <li><a href="/#about">About</a></li>
+    
+    
+      <li><a href="/#contact">Contact</a></li>
+    
+    
+    <!-- <li><a class="scroll main-btn" data-speed="1500" href="#">Blog</a></li> -->
+  
+  </ul>
+</aside>
+        <div class="hero row">
+  <div class="large-3 large-centered columns">
+    <a href="/">
+      <img id="logo" src="/images/logo.png" />
+    </a>
+    <h1>HI. I'M LILY. </h1>
+    <p>I'm a full stack developer. I love solving puzzles and making cool things.<br>
+    Let's grab some coffee if you like what I do.</p>
+    
+        <a class="main-btn" href="/#contact">Contact me</a>
+    
+  </div>
+</div>
+        <!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <title>Facebook Visualization</title>
+      <link rel="stylesheet" type="text/css" href="/fb-visualization/style.css">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc2/jquery.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.underscore.min.js"></script>
+    </head>
+    <body> 
+      <script src="//d3js.org/d3.v3.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.js"></script>
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css">
+      <svg id="friend-gender"/>
+      <div id="fb-root"></div>
+      <script>
+
+    //   var data = [
+    //   { 
+    //     "label": "One",
+    //     "value" : 29.765957771107
+    //   } , 
+    //   { 
+    //     "label": "Two",
+    //     "value" : 0
+    //   } , 
+    //   { 
+    //     "label": "Three",
+    //     "value" : 32.807804682612
+    //   } , 
+    //   { 
+    //     "label": "Four",
+    //     "value" : 196.45946739256
+    //   } , 
+    //   { 
+    //     "label": "Five",
+    //     "value" : 0.19434030906893
+    //   } , 
+    //   { 
+    //     "label": "Six",
+    //     "value" : 98.079782601442
+    //   } , 
+    //   { 
+    //     "label": "Seven",
+    //     "value" : 13.925743130903
+    //   } , 
+    //   { 
+    //     "label": "Eight",
+    //     "value" : 5.1387322875705
+    //   }
+    // ];
+      
+        
+        function getFriends (callback) {
+          var friends = [];
+          FB.api('/me/friends?fields=id,name,gender', function(response) {
+            var getNext = function (url) {
+              $.get(url).done(function(res){
+                friends = friends.concat(res.data);
+                if (res.paging.next) {
+                  getNext(res.paging.next);
+                } else {
+                  callback(friends);
+                }
+              })
+            }
+            friends = response.data;
+            if(response.paging.next) {getNext(response.paging.next);}
+          })
+        }
+
+        function renderStatistics (friends) {
+          var genders = _.reduce(friends, function(genders, friend) {
+            genders[friend.gender] ? genders[friend.gender] += 1 : genders[friend.gender] = 1;
+            return genders;
+          }, {});
+
+          var data = _.map(genders, function(val, gender) {
+            return {label: gender, value: val}; 
+          })
+
+          nv.addGraph(function() {
+            var chart = nv.models.pieChart()
+              .x(function(d) { return d.label })
+              .y(function(d) { return d.value })
+              .showLabels(true)     //Display pie labels
+              .labelThreshold(.05)  //Configure the minimum slice size for labels to show up
+              .labelType("percent") //Configure what type of data to show in the label. Can be "key", "value" or "percent"
+              .donut(true)          //Turn on Donut mode. Makes pie chart look tasty!
+              .donutRatio(0.35)     //Configure how big you want the donut hole size to be.
+              ;
+
+            d3.select("svg#friend-gender")
+                .datum(data)
+                .transition().duration(350)
+                .call(chart);
+
+            return chart;     
+          }); 
+        }
+
+
+
+        window.fbAsyncInit = function () {
+          FB.init({
+            appId      : 424135817724047,
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+          });
+
+          // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
+          // for any authentication related change, such as login, logout or session refresh. This means that
+          // whenever someone who was previously logged out tries to log in again, the correct case below 
+          // will be handled. 
+          FB.Event.subscribe('auth.authResponseChange', function(response) {
+            // Here we specify what we do with the response anytime this event occurs. 
+            if (response.status === 'connected') {
+              // The response object is returned with a status field that lets the app know the current
+              // login status of the person. In this case, we're handling the situation where they 
+              // have logged in to the app.
+              console.log("connected to Facebook")
+              getFriends(renderStatistics);
+              
+            } else if (response.status === 'not_authorized') {
+              // In this case, the person is logged into Facebook, but not into the app, so we call
+              // FB.login() to prompt them to do so. 
+              // In real-life usage, you wouldn't want to immediately prompt someone to login 
+              // like this, for two reasons:
+              // (1) JavaScript created popup windows are blocked by most browsers unless they 
+              // result from direct interaction from people using the app (such as a mouse click)
+              // (2) it is a bad experience to be continually prompted to login upon page load.
+              FB.login();
+            } else {
+              // In this case, the person is not logged into Facebook, so we call the login() 
+              // function to prompt them to do so. Note that at this stage there is no indication
+              // of whether they are logged into the app. If they aren't then they'll see the Login
+              // dialog right after they log in to Facebook. 
+              // The same caveats as above apply to the FB.login() call here.
+              FB.login();
+            }
+          }); 
+        };
+
+        // Load the SDK asynchronously
+        (function(d){
+          var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement('script'); js.id = id; js.async = true;
+          js.src = "http://connect.facebook.net/en_US/all.js";
+          ref.parentNode.insertBefore(js, ref);
+        }(document));
+
+
+        
+
+
+
+        
+
+
+        // $(function(){
+        //   getFriends();
+
+        //   alert("lily is awesome")
+
+          
+
+        //   // reusable function
+        //   function flattened (arr) {
+        //     arr.reduce(function(a, b) {
+        //       return a.concat(b);
+        //     });
+        //   }
+
+        //   function genderPercentage() {
+            
+        //     console.log(flattened(friends))
+        //   }
+        //  }); 
+          
+
+        
+      </script>
+
+      <!--
+        Below we include the Login Button social plugin. This button uses the JavaScript SDK to
+        present a graphical Login button that triggers the FB.login() function when clicked. -->
+
+      <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+  </body>
+</html>
+
+
+        <a class="exit-off-canvas"></a>
+        <footer class="row" id="contact">
+  <div class="contact-form small-9 large-10 columns">
+    <div id="wufoo-zjvxiza1fdtym6">
+    Fill out my <a href="https://lilyj.wufoo.com/forms/zjvxiza1fdtym6">online form</a>.
+    </div>
+  </div>
+  <script type="text/javascript">var zjvxiza1fdtym6;(function(d, t) {
+  var s = d.createElement(t), options = {
+  'userName':'lilyj', 
+  'formHash':'zjvxiza1fdtym6', 
+  'autoResize':true,
+  'height':'464',
+  'async':true,
+  'host':'wufoo.com',
+  'header':'show', 
+  'ssl':true};
+  s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+  s.onload = s.onreadystatechange = function() {
+  var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+  try { zjvxiza1fdtym6 = new WufooForm();zjvxiza1fdtym6.initialize(options);zjvxiza1fdtym6.display(); } catch (e) {}};
+  var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+  })(document, 'script');</script>
+  <div class="small-3 large-2 columns">
+   <a href="http://github.com/LilyJ" target="_blank"><i class="fa fa-github-square"></i></a>
+   <a href="http://www.linkedin.com/in/lilyjarusvasunt" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+   <a href="https://twitter.com/lilyjarusvasunt" target="_blank"><i class="fa fa-twitter-square"></i></a> 
+  </div>
+  <p>© 2014 Lily Jarusvasunt. Powered by Middleman and GitHub Pages.</p>
+</footer>
+      </div>
+    </div>
+    <script src="/javascripts/vendor/smooth-scroll.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.2/js/foundation/foundation.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.2/js/foundation/foundation.offcanvas.min.js"></script>
+    <script>$(document).foundation();</script>
+  </body>
+</html>
