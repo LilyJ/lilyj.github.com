@@ -4,19 +4,38 @@
       <meta charset="utf-8" />
       <title>Facebook Visualization</title>
       <link rel="stylesheet" type="text/css" href="/fb-visualization/visualization.css">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc2/jquery.min.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.underscore.min.js"></script>
     </head>
     <body> 
-      <script src="//d3js.org/d3.v3.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.js"></script>
       <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css">
 
-      <svg id="gender"/>
-      <svg id="mo-of-birth"/>
-
       <div id="fb-root"></div>
       <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+      <h1 class="header">Loading your friends...</h1>
+
+      <div id="gender-container" class="chart">
+        <svg id="gender"/>
+        <h1>Gender Percentage</h1>
+      </div>
+      <div id="mo-of-birth-container" class="chart">
+        <svg id="mo-of-birth"/>
+        <h1>Months of Birth</h1>
+      </div>
+      <div id="age-container" class="chart">
+        <svg id="age"/>
+        <h1>Age</h1>
+      </div>
+      <div id="religion-container" class="chart">
+        <svg id="religion"/>
+        <h1>Religion</h1>
+      </div>
+
+      
+      
       <script src="/fb-visualization/visualization.js"></script>
   </body>
 </html>
