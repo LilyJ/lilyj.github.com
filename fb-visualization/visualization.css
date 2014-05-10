@@ -1,0 +1,59 @@
+html{
+  background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/inverted/tiny_grid.png"); 
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F2F2F2;
+  color: #808080;
+}
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+h1.header{
+  padding: 0;
+  left: 35%;
+  top: 0;
+  font-size: 1.5em;
+  position: absolute;
+}
+
+svg text{
+  font-family: 'Open Sans', sans-serif !important;
+  color: #808080 !important;
+  fill: inherit !important;
+}
+
+text.nv-legend-text{
+  fill: #808080 !important;
+}
+
+.chart{
+  height: 280px;
+  margin-top: 30px;
+}
+
+#gender-container{
+  width: 30%;
+  text-align: center;
+  float: left;
+  padding: 0;
+}
+
+#mo-of-birth-container{
+  width: 60%;
+  display: inline-block;
+  text-align: center;
+}
+
+#age-container{
+  width: 60%;
+  text-align: center;
+  float: left;
+  padding: 0;
+}
+
+#religion-container{
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
