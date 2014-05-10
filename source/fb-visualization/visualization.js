@@ -42,7 +42,7 @@
         })
       }
       if(response.paging) { getNext(response.paging.next) }
-        console.log(response.data)
+        // console.log(response.data)
     })
   }
 
@@ -148,8 +148,6 @@
           .call(Chart.donutChart());
     })
   }
-
-
 
 
 

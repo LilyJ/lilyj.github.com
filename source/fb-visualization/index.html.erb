@@ -13,9 +13,10 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.js"></script>
       <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css">
 
-      <div id="fb-root"></div>
+      
       <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-      <h1 class="header">Loading your friends...</h1>
+      <div id="fb-root"></div>
+      <h1 id="loading" class="header">Loading your friends...</h1>
 
       <div id="gender-container" class="chart">
         <svg id="gender"/>
@@ -33,8 +34,6 @@
         <svg id="religion"/>
         <h1>Religion</h1>
       </div>
-
-      
       
       <script src="/fb-visualization/visualization.js"></script>
   </body>
