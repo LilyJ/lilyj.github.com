@@ -86,7 +86,7 @@ body {
   }
 }
 
-.portfolio{
+#portfolio, #projects{
   padding-top: 60px;
   padding-bottom: 60px;  
   min-width: 100%;
@@ -100,6 +100,11 @@ body {
       color: $salmon;
     }
   }
+}
+
+#projects{
+  // background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/inverted/tiny_grid.png"); 
+  border-top: 5px solid $yellow;
 }
 
 .feature-blog{
@@ -125,8 +130,10 @@ body {
   padding-bottom: 60px;
   border-top: 5px dashed $yellow;
   #lily{
-    border-radius: 1em;
     @media (min-width: 64.063em) { width: 80%;}
+    width: 50%;
+    padding-bottom: 2em;
+    margin: 0 auto;
   }
   p{
     font-size: 15px;

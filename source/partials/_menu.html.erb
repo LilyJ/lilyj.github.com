@@ -7,6 +7,11 @@
       <li><a href="/#portfolio">Portfolio</a></li>
     <% end %>
     <% if page_classes == "index" %>
+      <li><a class="scroll main-btn" data-speed="1500" data-easing="easeInOutCubic" data-url="false" href="#projects">Projects</a></li>
+    <% else %>
+      <li><a href="/#projects">Projects</a></li>
+    <% end %>
+    <% if page_classes == "index" %>
       <li><a class="scroll main-btn" data-speed="1500" href="#about">About</a></li>
     <% else %>
       <li><a href="/#about">About</a></li>
