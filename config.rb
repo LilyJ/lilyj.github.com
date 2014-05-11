@@ -31,7 +31,7 @@ page "humans.txt", :layout => false
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 page "/parallax", proxy: "/parallax/parallax.html", layout: false
-page "/visualization", proxy: "/fb-visualization/index.html", layout: false
+page "/visualization", proxy: "/visualization/visualization.html", layout: false
 
 ###
 # Helpers
